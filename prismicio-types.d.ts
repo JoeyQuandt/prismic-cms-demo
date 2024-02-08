@@ -431,6 +431,48 @@ type HeroSliceVariation = HeroSliceDefault | HeroSliceImageRight;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *Test → Primary*
+ */
+export interface TestSliceDefaultPrimary {
+  /**
+   * Image field in *Test → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: test.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Test Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Test*
+ */
+type TestSliceVariation = TestSliceDefault;
+
+/**
+ * Test Shared Slice
+ *
+ * - **API ID**: `test`
+ * - **Description**: Test
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestSlice = prismic.SharedSlice<"test", TestSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -462,6 +504,10 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSliceDefault,
       HeroSliceImageRight,
+      TestSlice,
+      TestSliceDefaultPrimary,
+      TestSliceVariation,
+      TestSliceDefault,
     };
   }
 }
