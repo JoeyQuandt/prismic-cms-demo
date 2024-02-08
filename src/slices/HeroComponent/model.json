@@ -1,0 +1,43 @@
+{
+  "id": "hero_component",
+  "type": "SharedSlice",
+  "name": "HeroComponent",
+  "description": "HeroComponent",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "CTAbutton": {
+          "type": "Link",
+          "config": {
+            "label": "CTAButton",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "heroImage": {
+          "type": "Image",
+          "config": {
+            "label": "HeroImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

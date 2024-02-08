@@ -1,0 +1,27 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "navbaritems": {
+        "type": "Link",
+        "config": {
+          "label": "NavbarItems",
+          "select": "document",
+          "customtypes": ["navbar"]
+        }
+      }
+    }
+  }
+}

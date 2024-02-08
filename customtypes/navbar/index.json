@@ -1,0 +1,31 @@
+{
+  "id": "navbar",
+  "label": "Navbar",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "navbarItems": {
+        "type": "Group",
+        "config": {
+          "label": "NavbarItems",
+          "repeat": true,
+          "fields": {}
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone"
+      }
+    }
+  }
+}
