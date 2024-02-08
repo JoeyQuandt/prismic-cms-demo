@@ -431,71 +431,6 @@ type HeroSliceVariation = HeroSliceDefault | HeroSliceImageRight;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
-/**
- * Primary content in *HeroComponent → Primary*
- */
-export interface HeroComponentSliceDefaultPrimary {
-  /**
-   * Heading field in *HeroComponent → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_component.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * CTAButton field in *HeroComponent → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_component.primary.CTAbutton
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  CTAbutton: prismic.LinkField;
-
-  /**
-   * HeroImage field in *HeroComponent → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_component.primary.heroImage
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  heroImage: prismic.ImageField<never>;
-}
-
-/**
- * Default variation for HeroComponent Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroComponentSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<HeroComponentSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *HeroComponent*
- */
-type HeroComponentSliceVariation = HeroComponentSliceDefault;
-
-/**
- * HeroComponent Shared Slice
- *
- * - **API ID**: `hero_component`
- * - **Description**: HeroComponent
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroComponentSlice = prismic.SharedSlice<
-  "hero_component",
-  HeroComponentSliceVariation
->;
-
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -527,10 +462,6 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSliceDefault,
       HeroSliceImageRight,
-      HeroComponentSlice,
-      HeroComponentSliceDefaultPrimary,
-      HeroComponentSliceVariation,
-      HeroComponentSliceDefault,
     };
   }
 }
