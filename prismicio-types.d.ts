@@ -108,7 +108,7 @@ export type NavbarDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = CustomerLogosSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = TestSlice | CustomerLogosSlice | HeroSlice;
 
 /**
  * Content for Page documents
