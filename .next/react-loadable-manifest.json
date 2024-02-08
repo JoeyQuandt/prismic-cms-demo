@@ -1,0 +1,20 @@
+{
+  "../slices/index.js -> ./CustomerLogos": {
+    "id": "../slices/index.js -> ./CustomerLogos",
+    "files": [
+      "static/chunks/src_slices_CustomerLogos_index_js.js"
+    ]
+  },
+  "../slices/index.js -> ./Hero": {
+    "id": "../slices/index.js -> ./Hero",
+    "files": [
+      "static/chunks/src_slices_Hero_index_js.js"
+    ]
+  },
+  "../slices/index.js -> ./HeroComponent": {
+    "id": "../slices/index.js -> ./HeroComponent",
+    "files": [
+      "static/chunks/src_slices_HeroComponent_index_js.js"
+    ]
+  }
+}
